@@ -18,13 +18,13 @@
         <h1>Responsivetabs</h1>
         <p>jQuery plugin that provides responsive tab functionality. The tabs transform to an accordion when it reaches a CSS breakpoint.</p>
 
-        <p class="view"><a href="https://github.com/jellekralt/responsiveTabs">View the Project on GitHub <small>jellekralt/responsiveTabs</small></a></p>
+        <p class="view"><a href="https://github.com/jellekralt/Responsive-Tabs">View the Project on GitHub <small>jellekralt/Responsive-Tabs</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/jellekralt/responsiveTabs/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/jellekralt/responsiveTabs/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/jellekralt/responsiveTabs">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/jellekralt/Responsive-Tabs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jellekralt/Responsive-Tabs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jellekralt/Responsive-Tabs">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
@@ -72,7 +72,78 @@
 
 <p>=&gt; Use this jQuery function to enable responsive tabs on the selected element:</p>
 
-<pre><code>$('#responsiveTabsDemo').responsiveTabs();
+<pre><code>$('#responsiveTabsDemo').responsiveTabs({
+    startCollapsed: 'accordion'
+});
+</code></pre>
+
+<h1>
+<a name="api" class="anchor" href="#api"><span class="octicon octicon-link"></span></a>API</h1>
+
+<p>The following options are available:</p>
+
+<h3>
+<a name="collapsible" class="anchor" href="#collapsible"><span class="octicon octicon-link"></span></a>Collapsible</h3>
+
+<p>If set to 'true' the panels are collapsible. If a tab is active and you select it again, the panel will collapse.</p>
+
+<pre><code>    collapsible: false, // The panels are not collapsible
+    collapsible: true, // The panels are collapsible
+</code></pre>
+
+<h3>
+<a name="start-collapsed" class="anchor" href="#start-collapsed"><span class="octicon octicon-link"></span></a>Start collapsed</h3>
+
+<p>This option defines if the first panel on load starts collapsed or not. With the values 'tabs' and 'accordion' you can specify in which view the tabs are supposed to start collapsed.</p>
+
+<pre><code>    startCollapsed: false // Do not collapse on start
+    startCollapsed: true // Start with the panels collapsed
+    startCollapsed: 'tabs' // Start with the panels collapsed if the view is currently tab based
+    startCollapsed: 'accordion' // Start with the panels collapsed if the view is currently accordion based
+</code></pre>
+
+<h3>
+<a name="rotate" class="anchor" href="#rotate"><span class="octicon octicon-link"></span></a>Rotate</h3>
+
+<p>This option can be used to auto rotate the tabs. The tabs will stop rotating when a tab is selected.</p>
+
+<pre><code>    rotate: false, // The tabs won't auto rotate
+    rotate: true, // The tabs will auto rotate from the start
+</code></pre>
+
+<h2>
+<a name="callbacks" class="anchor" href="#callbacks"><span class="octicon octicon-link"></span></a>Callbacks</h2>
+
+<h3>
+<a name="activate" class="anchor" href="#activate"><span class="octicon octicon-link"></span></a>Activate</h3>
+
+<p>This callback is called after a tab is selected</p>
+
+<pre><code>    activate: function(){},
+</code></pre>
+
+<h3>
+<a name="deactivate" class="anchor" href="#deactivate"><span class="octicon octicon-link"></span></a>Deactivate</h3>
+
+<p>This callback is called after a tab is deactivated</p>
+
+<pre><code>    deactivate: function(){},
+</code></pre>
+
+<h3>
+<a name="load" class="anchor" href="#load"><span class="octicon octicon-link"></span></a>Load</h3>
+
+<p>This callback is called after the plugin has been loaded</p>
+
+<pre><code>    load: function(){},
+</code></pre>
+
+<h3>
+<a name="activate-state" class="anchor" href="#activate-state"><span class="octicon octicon-link"></span></a>Activate State</h3>
+
+<p>This callback is called after the plugin switches from state (Tab view / Accordion view)</p>
+
+<pre><code>    activateState: function(){}
 </code></pre>
 
 <h1>
@@ -87,8 +158,9 @@
 
 <p>If you have any questions, feel free to contact me.</p>
 
-<p>Jelle Kralt
-<a href="mailto:jelle@jellekralt.nl">jelle@jellekralt.nl</a></p>
+<p>Jelle Kralt</p>
+
+<p><a href="mailto:jelle@jellekralt.nl">jelle@jellekralt.nl</a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/jellekralt">jellekralt</a></p>
